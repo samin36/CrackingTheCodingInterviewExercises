@@ -41,11 +41,11 @@ public class RemoveDuplicates {
             linkedList.addToBack(c);
             linkedList2.addToBack(c);
         }
-        System.out.printf("Original: %s\n", linkedList.toString());
+        System.out.printf("Original: %s\n", linkedList);
         removeDuplicatesNoBuffer(linkedList);
-        System.out.printf("No Buffer: %s\n", linkedList.toString());
+        System.out.printf("No Buffer: %s\n", linkedList);
         removeDuplicates(linkedList2);
-        System.out.printf("Buffer: %s\n", linkedList2.toString());
+        System.out.printf("Buffer: %s\n", linkedList2);
     }
 
 
