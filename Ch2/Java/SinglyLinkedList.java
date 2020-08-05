@@ -8,12 +8,31 @@ public class SinglyLinkedList<T> {
 
     public void addToBack(T data) {
         Node<T> newNode = new Node(data);
+        addToBack(newNode);
+    }
+
+    public void addToBack(Node<T> newNode) {
         if (isEmpty()) {
             head = newNode;
             tail = newNode;
         } else {
             tail.next = newNode;
             tail = newNode;
+        }
+    }
+
+    public void addToFront(T data) {
+        Node<T> newNode = new Node(data);
+        addToFront(newNode);
+    }
+
+    public void addToFront(Node<T> newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
     }
 
