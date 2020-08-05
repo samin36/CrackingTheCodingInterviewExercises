@@ -63,11 +63,16 @@ public class SinglyLinkedList<T> {
         
         public Node(T data) {
             this.data = data;
+            next = null;
         }
 
         @Override
         public String toString() {
             return data.toString();
+        }
+
+        public void setNext(Node<T> nextNode) {
+            next = nextNode;
         }
     }
 
