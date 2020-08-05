@@ -17,6 +17,16 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    public Node<T> getNodeAtIndex(int index) {
+        Node<T> curr = head;
+        int i = 0;
+        while (i != index) {
+            i++;
+            curr = curr.next;
+        }
+        return curr;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
