@@ -29,13 +29,15 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        SinglyLinkedList<Character> linkedList = new SinglyLinkedList();
-        String word = "anutforajaroftuna";
-        for (char c : word.toCharArray()) {
-            linkedList.addToBack(c);
+        SinglyLinkedList<Character> linkedList;
+        String[] testWords = {"madam", "racecar","108012", "ll", "1805081", "hello"};
+        for (String word : testWords) {
+            linkedList = new SinglyLinkedList();
+            for (char c  : word.toCharArray()) {
+                linkedList.addToBack(c);
+            }
+            System.out.printf("%s is%sa palindrome\n", word, isPalindrome(linkedList) ? " " : " NOT ");
         }
-
-        System.out.printf("%s is%sa palindrome", word, isPalindrome(linkedList) ? " " : " NOT ");
     }
 
 }   
